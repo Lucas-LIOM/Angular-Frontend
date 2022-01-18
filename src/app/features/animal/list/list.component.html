@@ -1,0 +1,8 @@
+<h3>Listar Animais</h3>
+
+<shared-list
+  [headers]="headers"
+  (deleteEntity)="deleteAnimal($event)"
+  (searchEntity)="searchAnimal($event)"
+  (limitEntity)="limitAnimal($event)"
+></shared-list>

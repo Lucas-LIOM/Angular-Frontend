@@ -1,0 +1,21 @@
+<div>
+  <input type="text" [(ngModel)]="inputValue" (keyup.enter)="search()" />
+  <button (click)="goToAdd()">Add</button>
+  <button (click)="toLimit()">Limit to 3</button>
+</div>
+
+<table>
+  <tr>
+    <th *ngFor="let header of headers">
+      {{ header }}
+    </th>
+  </tr>
+
+  <tr *ngFor="let entity of entities">
+    <td *ngFor="let key of keys">{{ entity[key] }}</td>
+    <td>
+      <button (click)="editEntity(entity.id)">Edit</button>
+      <button (click)="onDeleteEntity(entity.id)">Delete</button>
+    </td>
+  </tr>
+</table>
